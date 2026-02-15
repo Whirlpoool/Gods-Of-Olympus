@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Gods-Of-Olympus"></stringAttribute>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="net.neoforged.devlaunch.Main"></stringAttribute>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value=" @C:\\FRC\\Gods-Of-Olympus\\build\\moddev\\dataRunProgramArgs.txt"></stringAttribute>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value=" @C:\\FRC\\Gods-Of-Olympus\\build\\moddev\\dataRunVmArgs.txt -Dfml.modFolders=gods_of_olympus%%C:\\FRC\\Gods-Of-Olympus\\bin\\main"></stringAttribute>
+    <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="C:\FRC\Gods-Of-Olympus\run"></stringAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.STOP_IN_MAIN" value="false"></booleanAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"></booleanAttribute>
+</launchConfiguration>

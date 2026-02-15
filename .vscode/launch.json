@@ -1,0 +1,93 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Client",
+      "presentation": {
+        "group": "Mod Development - Gods-Of-Olympus",
+        "order": 0
+      },
+      "projectName": "Gods-Of-Olympus",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@C:\\FRC\\Gods-Of-Olympus\\build\\moddev\\clientRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@C:\\FRC\\Gods-Of-Olympus\\build\\moddev\\clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003dgods_of_olympus%%C:\\FRC\\Gods-Of-Olympus\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Data",
+      "presentation": {
+        "group": "Mod Development - Gods-Of-Olympus",
+        "order": 1
+      },
+      "projectName": "Gods-Of-Olympus",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@C:\\FRC\\Gods-Of-Olympus\\build\\moddev\\dataRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@C:\\FRC\\Gods-Of-Olympus\\build\\moddev\\dataRunVmArgs.txt",
+        "-Dfml.modFolders\u003dgods_of_olympus%%C:\\FRC\\Gods-Of-Olympus\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "GameTestServer",
+      "presentation": {
+        "group": "Mod Development - Gods-Of-Olympus",
+        "order": 2
+      },
+      "projectName": "Gods-Of-Olympus",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@C:\\FRC\\Gods-Of-Olympus\\build\\moddev\\gameTestServerRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@C:\\FRC\\Gods-Of-Olympus\\build\\moddev\\gameTestServerRunVmArgs.txt",
+        "-Dfml.modFolders\u003dgods_of_olympus%%C:\\FRC\\Gods-Of-Olympus\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Server",
+      "presentation": {
+        "group": "Mod Development - Gods-Of-Olympus",
+        "order": 3
+      },
+      "projectName": "Gods-Of-Olympus",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@C:\\FRC\\Gods-Of-Olympus\\build\\moddev\\serverRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@C:\\FRC\\Gods-Of-Olympus\\build\\moddev\\serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003dgods_of_olympus%%C:\\FRC\\Gods-Of-Olympus\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    }
+  ]
+}
