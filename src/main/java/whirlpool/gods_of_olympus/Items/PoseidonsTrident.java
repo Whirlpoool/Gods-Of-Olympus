@@ -18,7 +18,7 @@ import net.minecraft.world.level.Level;
 
 public class PoseidonsTrident extends TridentItem {
     public static final int THROW_THRESHOLD_TIME = 10;
-    public static final float BASE_DAMAGE = 10.0F;
+    public static final float BASE_DAMAGE = 9.0F;
     public static final float PROJECTILE_SHOOT_POWER = 3.0F;
 
     public PoseidonsTrident(Properties properties) {
@@ -27,7 +27,7 @@ public class PoseidonsTrident extends TridentItem {
     }
 
     public static ItemAttributeModifiers createAttributes() {
-        return ItemAttributeModifiers.builder().add(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_ID, (double)10.0F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND).add(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_ID, (double)-2.9F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND).build();
+        return ItemAttributeModifiers.builder().add(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_ID, (double)9.0F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND).add(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_ID, (double)-2.9F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND).build();
     }
 
     /**
