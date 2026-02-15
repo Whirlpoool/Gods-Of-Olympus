@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "gods_of_olympus:item/ares_spear_of_war"
+  }
+}
