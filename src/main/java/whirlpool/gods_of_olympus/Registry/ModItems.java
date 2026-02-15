@@ -10,6 +10,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import whirlpool.gods_of_olympus.Gods_of_olympus;
+import whirlpool.gods_of_olympus.Items.HadesHelmOfDarkness;
 import whirlpool.gods_of_olympus.Items.HermesWingedSandals;
 import whirlpool.gods_of_olympus.Items.PoseidonsTrident;
 import whirlpool.gods_of_olympus.Renderer.ModRarities;
@@ -63,8 +64,9 @@ public class ModItems {
      * Currently registered as a generic Item with EPIC rarity.
      */
     public static final DeferredItem<Item> HADES_HELM_OF_DARKNESS = ITEMS.registerItem("hades_helm_of_darkness",
-            properties -> new Item(
+            properties -> new HadesHelmOfDarkness(
                     properties
+                            .component(DataComponents.EQUIPPABLE, Equippable.builder(EquipmentSlot.HEAD).build())
                             .rarity(ModRarities.HADES)
                             .durability(1000) //SUBJECT TO CHANGE
             ));
