@@ -15,45 +15,45 @@ public class ModRarities {
     /**
      * Rareness/Rarity for items associated with Poseidon.
      */
-    public static final Rarity POSEIDON = Rarity.valueOf(Gods_of_olympus.MODID + ":" + "poseidon");
+    public static final Rarity POSEIDON = ExtendedRarities.POSEIDON.getValue();
 
     /**
      * Rareness/Rarity for items associated with Zeus.
      */
-    public static final Rarity ZEUS = Rarity.valueOf(Gods_of_olympus.MODID + ":" + "zeus");
+    public static final Rarity ZEUS = ExtendedRarities.ZEUS.getValue();
 
     /**
      * Rareness/Rarity for items associated with Hades.
      */
-    public static final Rarity HADES = Rarity.valueOf(Gods_of_olympus.MODID + ":" + "hades");
+    public static final Rarity HADES = ExtendedRarities.HADES.getValue();
 
     /**
      * Rareness/Rarity for items associated with Athena.
      */
-    public static final Rarity ATHENA = Rarity.valueOf(Gods_of_olympus.MODID + ":" + "athena");
+    public static final Rarity ATHENA = ExtendedRarities.ATHENA.getValue();
 
     /**
      * Rareness/Rarity for items associated with Apollo.
      */
-    public static final Rarity APOLLO = Rarity.valueOf(Gods_of_olympus.MODID + ":" + "apollo");
+    public static final Rarity APOLLO = ExtendedRarities.APOLLO.getValue();
 
     /**
      * Rareness/Rarity for items associated with Artemis.
      */
-    public static final Rarity ARTEMIS = Rarity.valueOf(Gods_of_olympus.MODID + ":" + "artemis");
+    public static final Rarity ARTEMIS = ExtendedRarities.ARTEMIS.getValue();
 
     /**
      * Rareness/Rarity for items associated with Ares.
      */
-    public static final Rarity ARES = Rarity.valueOf(Gods_of_olympus.MODID + ":" + "ares");
+    public static final Rarity ARES = ExtendedRarities.ARES.getValue();
 
     /**
      * Rareness/Rarity for items associated with Hermes.
      */
-    public static final Rarity HERMES = Rarity.valueOf(Gods_of_olympus.MODID + ":" + "hermes");
+    public static final Rarity HERMES = ExtendedRarities.HERMES.getValue();
 
     /**
      * Rareness/Rarity for items associated with Hephaestus.
      */
-    public static final Rarity HEPHAESTUS = Rarity.valueOf(Gods_of_olympus.MODID + ":" + "hephaestus");
+    public static final Rarity HEPHAESTUS = ExtendedRarities.HEPHAESTUS.getValue();
 }
