@@ -2,6 +2,7 @@ package whirlpool.gods_of_olympus.Renderer;
 
 import net.minecraft.world.item.Rarity;
 import whirlpool.gods_of_olympus.ExtendedEnums.ExtendedRarities;
+import whirlpool.gods_of_olympus.Gods_of_olympus;
 
 /**
  * A central collection of all custom Item Rarities added by the Gods of Olympus
@@ -14,7 +15,7 @@ public class ModRarities {
     /**
      * Rareness/Rarity for items associated with Poseidon.
      */
-    public static final Rarity POSEIDON = ExtendedRarities.POSEIDON.getValue();
+    public static final Rarity POSEIDON = Rarity.valueOf(Gods_of_olympus.MODID + ":" + "poseidon");
 
     /**
      * Rareness/Rarity for items associated with Zeus.

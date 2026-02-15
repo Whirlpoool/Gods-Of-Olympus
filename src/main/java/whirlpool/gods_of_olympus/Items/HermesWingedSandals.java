@@ -18,12 +18,20 @@ public class HermesWingedSandals extends Item implements IItemExtension {
 
     @Override
     public void inventoryTick(ItemStack stack, ServerLevel level, Entity entity, @Nullable EquipmentSlot slot) {
-        if(entity instanceof Player player && player.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof HermesWingedSandals hermesWingedSandals && FLIGHT_TIME > 0) {
-            player.getAbilities().mayfly = true;
-            player.onUpdateAbilities();
-            FLIGHT_TIME--;
-        }else {
-
+        if(entity instanceof Player player && player.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof HermesWingedSandals hermesWingedSandals) {
+            System.out.println("Player is wearing Hermes Winged Sandals.");
+            if(player.onGround() && FLIGHT_TIME != 1200) {
+                System.out.println("Player is on the ground. Resetting flight time.");
+                FLIGHT_TIME = 1200; // Reset flight time when on the ground
+            }else {
+                if(FLIGHT_TIME > 0) {
+                    System.out.println("Player is in the air. Allowing flight. Remaining flight time: " + FLIGHT_TIME);
+                    player.getAbilities().mayfly = true; // Allow flying when in the air
+                    if(player.getAbilities().flying) {
+                        FLIGHT_TIME--; // Decrease flight time when in the air
+                    }
+                }
+            }
         }
     }
 }
