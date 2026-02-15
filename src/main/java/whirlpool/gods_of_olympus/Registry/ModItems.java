@@ -9,6 +9,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import whirlpool.gods_of_olympus.Gods_of_olympus;
 import whirlpool.gods_of_olympus.Items.PoseidonsTrident;
+import whirlpool.gods_of_olympus.Renderer.ModRarities;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Gods_of_olympus.MODID);
@@ -16,7 +17,7 @@ public class ModItems {
     public static final DeferredItem<Item> POSEIDONS_TRIDENT = ITEMS.registerItem("poseidons_trident",
             properties -> new PoseidonsTrident(
                     properties
-                            .rarity(Rarity.EPIC)
+                            .rarity(ModRarities.POSEIDON)
                             .durability(1000)
                             .attributes(PoseidonsTrident.createAttributes())
                             .component(DataComponents.TOOL, PoseidonsTrident.createToolProperties())
