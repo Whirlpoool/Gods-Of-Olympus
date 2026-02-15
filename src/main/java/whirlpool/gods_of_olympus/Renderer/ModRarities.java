@@ -20,40 +20,40 @@ public class ModRarities {
     /**
      * Rareness/Rarity for items associated with Zeus.
      */
-    public static final Rarity ZEUS = ExtendedRarities.ZEUS.getValue();
+    public static final Rarity ZEUS = Rarity.valueOf(Gods_of_olympus.MODID + ":" + "zeus");
 
     /**
      * Rareness/Rarity for items associated with Hades.
      */
-    public static final Rarity HADES = ExtendedRarities.HADES.getValue();
+    public static final Rarity HADES = Rarity.valueOf(Gods_of_olympus.MODID + ":" + "hades");
 
     /**
      * Rareness/Rarity for items associated with Athena.
      */
-    public static final Rarity ATHENA = ExtendedRarities.ATHENA.getValue();
+    public static final Rarity ATHENA = Rarity.valueOf(Gods_of_olympus.MODID + ":" + "athena");
 
     /**
      * Rareness/Rarity for items associated with Apollo.
      */
-    public static final Rarity APOLLO = ExtendedRarities.APOLLO.getValue();
+    public static final Rarity APOLLO = Rarity.valueOf(Gods_of_olympus.MODID + ":" + "apollo");
 
     /**
      * Rareness/Rarity for items associated with Artemis.
      */
-    public static final Rarity ARTEMIS = ExtendedRarities.ARTEMIS.getValue();
+    public static final Rarity ARTEMIS = Rarity.valueOf(Gods_of_olympus.MODID + ":" + "artemis");
 
     /**
      * Rareness/Rarity for items associated with Ares.
      */
-    public static final Rarity ARES = ExtendedRarities.ARES.getValue();
+    public static final Rarity ARES = Rarity.valueOf(Gods_of_olympus.MODID + ":" + "ares");
 
     /**
      * Rareness/Rarity for items associated with Hermes.
      */
-    public static final Rarity HERMES = ExtendedRarities.HERMES.getValue();
-    
+    public static final Rarity HERMES = Rarity.valueOf(Gods_of_olympus.MODID + ":" + "hermes");
+
     /**
      * Rareness/Rarity for items associated with Hephaestus.
      */
-    public static final Rarity HEPHAESTUS = ExtendedRarities.HEPHAESTUS.getValue();
+    public static final Rarity HEPHAESTUS = Rarity.valueOf(Gods_of_olympus.MODID + ":" + "hephaestus");
 }

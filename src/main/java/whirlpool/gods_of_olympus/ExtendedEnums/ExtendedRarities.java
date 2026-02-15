@@ -16,8 +16,6 @@ import java.util.function.UnaryOperator;
  * the vanilla {@link Rarity} enum.
  */
 public class ExtendedRarities {
-    // These colors are used to style the item names for each specific rarity.
-
     /**
      * Color for Poseidon items (Ocean Blue).
      */
