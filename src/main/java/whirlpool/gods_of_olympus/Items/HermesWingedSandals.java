@@ -23,13 +23,11 @@ public class HermesWingedSandals extends Item implements IItemExtension {
             if(player.onGround() && FLIGHT_TIME != 1200) {
                 System.out.println("Player is on the ground. Resetting flight time.");
                 FLIGHT_TIME = 1200; // Reset flight time when on the ground
-            }else {
-                if(FLIGHT_TIME > 0) {
-                    System.out.println("Player is in the air. Allowing flight. Remaining flight time: " + FLIGHT_TIME);
-                    player.getAbilities().mayfly = true; // Allow flying when in the air
-                    if(player.getAbilities().flying) {
-                        FLIGHT_TIME--; // Decrease flight time when in the air
-                    }
+            }else if(!player.onGround() && FLIGHT_TIME > 0) {
+                System.out.println("Player is in the air. Allowing flight. Remaining flight time: " + FLIGHT_TIME);
+                player.getAbilities().mayfly = true; // Allow flying when in the air
+                if(player.getAbilities().flying) {
+                    FLIGHT_TIME--; // Decrease flight time when in the air
                 }
             }
         }
