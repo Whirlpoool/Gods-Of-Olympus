@@ -1,3 +1,11 @@
 {
-  "item.gods_of_olympus.poseidons_trident": "Poseidon's Trident"
+  "item.gods_of_olympus.poseidons_trident": "Poseidon's Trident",
+  "item.gods_of_olympus.zeus_master_bolt": "Zeus' Master Bolt",
+  "item.gods_of_olympus.hades_helm_of_darkness": "Hades' Helm of Darkness",
+  "item.gods_of_olympus.aegis_sheild_of_athena": "Aegis Shield of Athena",
+  "item.gods_of_olympus.apollos_bow_of_light": "Apollo's Bow of Light",
+  "item.gods_of_olympus.artemis_bow_of_the_hunt": "Artemis' Bow of the Hunt",
+  "item.gods_of_olympus.ares_spear_of_war": "Ares' Spear of War",
+  "item.gods_of_olympus.hermes_winged_sandals": "Hermes' Winged Sandals",
+  "item.gods_of_olympus.hephaestus_hammer_of_fire": "Hephaestus' Hammer of Fire"
 }
