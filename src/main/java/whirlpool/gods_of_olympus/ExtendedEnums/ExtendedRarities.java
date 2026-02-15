@@ -9,14 +9,14 @@ import java.util.function.UnaryOperator;
 
 public class ExtendedRarities {
     public static final Color POSEIDONS_COLOR = new Color(10, 151, 252);
-    public static final Color ZEUS_COLOR = new Color(0, 0, 0);
-    public static final Color HADES_COLOR = new Color(0, 0, 0);
-    public static final Color ATHENA_COLOR = new Color(0, 0, 0);
-    public static final Color APOLLO_COLOR = new Color(0, 0, 0);
-    public static final Color ARTEMIS_COLOR = new Color(0, 0, 0);
-    public static final Color ARES_COLOR = new Color(0, 0, 0);
-    public static final Color HERMES_COLOR = new Color(0, 0, 0);
-    public static final Color HEPHAESTUS_COLOR = new Color(0, 0, 0);
+    public static final Color ZEUS_COLOR = new Color(184, 133, 48);
+    public static final Color HADES_COLOR = new Color(37, 44, 49);
+    public static final Color ATHENA_COLOR = new Color(187, 187, 187);
+    public static final Color APOLLO_COLOR = new Color(255, 216, 98);
+    public static final Color ARTEMIS_COLOR = new Color(143, 84, 198);
+    public static final Color ARES_COLOR = new Color(118, 16, 16);
+    public static final Color HERMES_COLOR = new Color(154, 167, 178);
+    public static final Color HEPHAESTUS_COLOR = new Color(216, 0, 0);
 
     public static final EnumProxy<Rarity> POSEIDON = new EnumProxy<>(
             Rarity.class, -5, "gods_of_olympus:poseidon", (UnaryOperator<Style>) style -> style.withColor(POSEIDONS_COLOR.getRGB())
