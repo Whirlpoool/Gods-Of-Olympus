@@ -8,6 +8,78 @@
         "class": "whirlpool/gods_of_olympus/ExtendedEnums/ExtendedRarities",
         "field": "POSEIDON"
       }
+    },
+    {
+      "enum": "net/minecraft/world/item/Rarity",
+      "name": "GODS_OF_OLYMPUS_ZEUS",
+      "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
+      "parameters": {
+        "class": "whirlpool/gods_of_olympus/ExtendedEnums/ExtendedRarities",
+        "field": "ZEUS"
+      }
+    },
+    {
+      "enum": "net/minecraft/world/item/Rarity",
+      "name": "GODS_OF_OLYMPUS_HADES",
+      "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
+      "parameters": {
+        "class": "whirlpool/gods_of_olympus/ExtendedEnums/ExtendedRarities",
+        "field": "HADES"
+      }
+    },
+    {
+      "enum": "net/minecraft/world/item/Rarity",
+      "name": "GODS_OF_OLYMPUS_ATHENA",
+      "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
+      "parameters": {
+        "class": "whirlpool/gods_of_olympus/ExtendedEnums/ExtendedRarities",
+        "field": "ATHENA"
+      }
+    },
+    {
+      "enum": "net/minecraft/world/item/Rarity",
+      "name": "GODS_OF_OLYMPUS_APOLLO",
+      "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
+      "parameters": {
+        "class": "whirlpool/gods_of_olympus/ExtendedEnums/ExtendedRarities",
+        "field": "APOLLO"
+      }
+    },
+    {
+      "enum": "net/minecraft/world/item/Rarity",
+      "name": "GODS_OF_OLYMPUS_ARTEMIS",
+      "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
+      "parameters": {
+        "class": "whirlpool/gods_of_olympus/ExtendedEnums/ExtendedRarities",
+        "field": "ARTEMIS"
+      }
+    },
+    {
+      "enum": "net/minecraft/world/item/Rarity",
+      "name": "GODS_OF_OLYMPUS_ARES",
+      "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
+      "parameters": {
+        "class": "whirlpool/gods_of_olympus/ExtendedEnums/ExtendedRarities",
+        "field": "ARES"
+      }
+    },
+    {
+      "enum": "net/minecraft/world/item/Rarity",
+      "name": "GODS_OF_OLYMPUS_HERMES",
+      "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
+      "parameters": {
+        "class": "whirlpool/gods_of_olympus/ExtendedEnums/ExtendedRarities",
+        "field": "HERMES"
+      }
+    },
+    {
+      "enum": "net/minecraft/world/item/Rarity",
+      "name": "GODS_OF_OLYMPUS_HEPHAESTUS",
+      "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
+      "parameters": {
+        "class": "whirlpool/gods_of_olympus/ExtendedEnums/ExtendedRarities",
+        "field": "HEPHAESTUS"
+      }
     }
   ]
 }
