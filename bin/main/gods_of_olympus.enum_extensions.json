@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "enum": "net/minecraft/world/item/Rarity",
+      "name": "GODS_OF_OLYMPUS_POSEIDON",
+      "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
+      "parameters": {
+        "class": "whirlpool/gods_of_olympus/ExtendedEnums/ExtendedRarities",
+        "field": "POSEIDON"
+      }
+    }
+  ]
+}
