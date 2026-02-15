@@ -16,7 +16,8 @@ public class PoseidonsTridentSpecialRenderer extends TridentSpecialRenderer {
 
     public PoseidonsTridentSpecialRenderer(TridentModel model) {
         super(model);
-        this.model = model; }
+        this.model = model;
+    }
 
     @Override
     public void submit(ItemDisplayContext itemDisplayContext, PoseStack poseStack, SubmitNodeCollector submitNodeCollector, int i, int i1, boolean b, int i2) {

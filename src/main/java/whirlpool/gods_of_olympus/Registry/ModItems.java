@@ -1,7 +1,6 @@
 package whirlpool.gods_of_olympus.Registry;
 
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.component.Weapon;
