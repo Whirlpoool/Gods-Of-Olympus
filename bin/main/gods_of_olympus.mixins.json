@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "whirlpool.gods_of_olympus.Mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "SpecialModelRenderersMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
