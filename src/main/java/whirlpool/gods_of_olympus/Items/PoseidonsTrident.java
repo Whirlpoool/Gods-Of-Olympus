@@ -11,7 +11,6 @@ import net.minecraft.world.entity.projectile.arrow.ThrownTrident;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TridentItem;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.phys.Vec3;
 
 public class PoseidonsTrident extends TridentItem {
     public PoseidonsTrident(Properties properties) {
@@ -28,18 +27,14 @@ public class PoseidonsTrident extends TridentItem {
             return InteractionResult.FAIL;
         } else {
             player.startUsingItem(hand);
-            return InteractionResult.PASS;
+            return InteractionResult.SUCCESS;
         }
     }
 
     @Override
     public Projectile asProjectile(Level level, Position position, ItemStack itemStack, Direction direction) {
-        ThrownTrident throwntrident = new ThrownTrident(level, position.x(), position.y(), position.z(), itemStack.copyWithCount(1));
+        ThrownTrident throwntrident = new ThrownTrident(level, position.x(), position.y(), position.z(), itemStack);
         throwntrident.pickup = AbstractArrow.Pickup.DISALLOWED;
-
-        if (throwntrident.getDeltaMovement().equals(new Vec3(0, 0, 0))) {
-            throwntrident.discard();
-        }
 
         return throwntrident;
     }
