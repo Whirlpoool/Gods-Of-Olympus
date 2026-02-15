@@ -20,6 +20,8 @@ modId = "gods_of_olympus" #mandatory
 version = "1.0.0" #mandatory
 # A display name for the mod
 displayName = "Gods Of Olympus" #mandatory
+
+enumExtensions="gods_of_olympus.enum_extensions.json"
 # A URL to query for updates for this mod. See the JSON update specification https://docs.neoforge.net/docs/misc/updatechecker/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 # A URL for the "homepage" for this mod, displayed in the mod UI

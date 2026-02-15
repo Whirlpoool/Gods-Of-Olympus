@@ -54,7 +54,7 @@ public class ModItems {
     public static final DeferredItem<Item> ZEUS_MASTER_BOLT = ITEMS.registerItem("zeus_master_bolt",
             properties -> new Item(
                     properties
-                            .rarity(Rarity.EPIC)
+                            .rarity(ModRarities.ZEUS)
                             .durability(1000) //SUBJECT TO CHANGE
             ));
 
@@ -65,7 +65,7 @@ public class ModItems {
     public static final DeferredItem<Item> HADES_HELM_OF_DARKNESS = ITEMS.registerItem("hades_helm_of_darkness",
             properties -> new Item(
                     properties
-                            .rarity(Rarity.EPIC)
+                            .rarity(ModRarities.HADES)
                             .durability(1000) //SUBJECT TO CHANGE
             ));
 
@@ -76,7 +76,7 @@ public class ModItems {
     public static final DeferredItem<Item> AEGIS_SHEILD_OF_ATHENA = ITEMS.registerItem("aegis_sheild_of_athena",
             properties -> new Item(
                     properties
-                            .rarity(Rarity.EPIC)
+                            .rarity(ModRarities.ATHENA)
                             .durability(1000) //SUBJECT TO CHANGE
             ));
     
@@ -87,7 +87,7 @@ public class ModItems {
     public static final DeferredItem<Item> APOLLOS_BOW_OF_LIGHT = ITEMS.registerItem("apollos_bow_of_light",
             properties -> new Item(
                     properties
-                            .rarity(Rarity.EPIC)
+                            .rarity(ModRarities.APOLLO)
                             .durability(1000) //SUBJECT TO CHANGE
             ));
 
@@ -98,7 +98,7 @@ public class ModItems {
     public static final DeferredItem<Item> ARTEMIS_BOW_OF_THE_HUNT = ITEMS.registerItem("artemis_bow_of_the_hunt",
             properties -> new Item(
                     properties
-                            .rarity(Rarity.EPIC)
+                            .rarity(ModRarities.ARTEMIS)
                             .durability(1000) //SUBJECT TO CHANGE
             ));
 
@@ -109,7 +109,7 @@ public class ModItems {
     public static final DeferredItem<Item> ARES_SPEAR_OF_WAR = ITEMS.registerItem("ares_spear_of_war",
             properties -> new Item(
                     properties
-                            .rarity(Rarity.EPIC)
+                            .rarity(ModRarities.ARES)
                             .durability(1000) //SUBJECT TO CHANGE
             ));
 
@@ -121,7 +121,7 @@ public class ModItems {
             properties -> new HermesWingedSandals(
                     properties
                             .component(DataComponents.EQUIPPABLE, Equippable.builder(EquipmentSlot.FEET).build())
-                            .rarity(Rarity.EPIC)
+                            .rarity(ModRarities.HERMES)
                             .enchantable(15)
                             .durability(481) //SUBJECT TO CHANGE
             ));
@@ -133,7 +133,7 @@ public class ModItems {
     public static final DeferredItem<Item> HEPHAESTUS_HAMMER_OF_FIRE = ITEMS.registerItem("hephaestus_hammer_of_fire",
             properties -> new Item(
                     properties
-                            .rarity(Rarity.EPIC)
+                            .rarity(ModRarities.HEPHAESTUS)
                             .durability(1000) //SUBJECT TO CHANGE
             ));
 
