@@ -10,7 +10,7 @@ import net.neoforged.neoforge.common.extensions.IItemExtension;
 import org.jspecify.annotations.Nullable;
 
 public class HermesWingedSandals extends Item implements IItemExtension {
-    public static final int FLIGHT_TIME = 1200; // 60 seconds in ticks (20 ticks per second)
+    public int FLIGHT_TIME = 1200; // 60 seconds in ticks (20 ticks per second)
 
     public HermesWingedSandals(Properties properties) {
         super(properties);
@@ -18,9 +18,12 @@ public class HermesWingedSandals extends Item implements IItemExtension {
 
     @Override
     public void inventoryTick(ItemStack stack, ServerLevel level, Entity entity, @Nullable EquipmentSlot slot) {
-        if(entity instanceof Player player && player.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof HermesWingedSandals hermesWingedSandals) {
+        if(entity instanceof Player player && player.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof HermesWingedSandals hermesWingedSandals && FLIGHT_TIME > 0) {
             player.getAbilities().mayfly = true;
             player.onUpdateAbilities();
+            FLIGHT_TIME--;
+        }else {
+
         }
     }
 }
