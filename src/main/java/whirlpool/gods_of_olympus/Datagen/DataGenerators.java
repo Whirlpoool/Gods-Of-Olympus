@@ -18,7 +18,7 @@ public class DataGenerators {
         PackOutput packOutput = generator.getPackOutput();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
-        generator.addProvider(true, new RarityEnumExtensionProvider(packOutput));
+        /*generator.addProvider(true, new RarityEnumExtensionProvider(packOutput));*/
     }
 
     @SubscribeEvent

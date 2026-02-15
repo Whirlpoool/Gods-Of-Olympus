@@ -10,8 +10,8 @@ import whirlpool.gods_of_olympus.Gods_of_olympus;
 import java.nio.file.Path;
 import java.util.concurrent.CompletableFuture;
 
-public class RarityEnumExtensionProvider implements DataProvider {
-    private final String[] GODS_FIELDS = {
+public class RarityEnumExtensionProvider /*implements DataProvider*/ {
+/*    private final String[] GODS_FIELDS = {
 
     };
 
@@ -57,5 +57,5 @@ public class RarityEnumExtensionProvider implements DataProvider {
     @Override
     public String getName() {
         return "Enum Extensions: Gods of Olympus Rarities";
-    }
+    }*/
 }
