@@ -1,10 +1,13 @@
 package whirlpool.gods_of_olympus.Registry;
 
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.component.Weapon;
+import net.minecraft.world.item.equipment.EquipmentAssets;
 import net.minecraft.world.item.equipment.Equippable;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -66,8 +69,10 @@ public class ModItems {
     public static final DeferredItem<Item> HADES_HELM_OF_DARKNESS = ITEMS.registerItem("hades_helm_of_darkness",
             properties -> new HadesHelmOfDarkness(
                     properties
-                            .component(DataComponents.EQUIPPABLE, Equippable.builder(EquipmentSlot.HEAD).build())
+                            .component(DataComponents.EQUIPPABLE, Equippable.builder(EquipmentSlot.HEAD).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE)
+                                    .setAsset(ResourceKey.create(EquipmentAssets.ROOT_ID, Identifier.fromNamespaceAndPath(Gods_of_olympus.MODID, "hades_helm_of_darkness"))).build())
                             .rarity(ModRarities.HADES)
+                            .attributes(HadesHelmOfDarkness.createAttributes())
                             .durability(1000) //SUBJECT TO CHANGE
             ));
 
@@ -122,7 +127,8 @@ public class ModItems {
     public static final DeferredItem<Item> HERMES_WINGED_SANDALS = ITEMS.registerItem("hermes_winged_sandals",
             properties -> new HermesWingedSandals(
                     properties
-                            .component(DataComponents.EQUIPPABLE, Equippable.builder(EquipmentSlot.FEET).build())
+                            .component(DataComponents.EQUIPPABLE, Equippable.builder(EquipmentSlot.FEET).setEquipSound(SoundEvents.ARMOR_EQUIP_LEATHER)
+                                    .setAsset(ResourceKey.create(EquipmentAssets.ROOT_ID, Identifier.fromNamespaceAndPath(Gods_of_olympus.MODID, "hermes_winged_sandals"))).build())
                             .rarity(ModRarities.HERMES)
                             .enchantable(15)
                             .attributes(HermesWingedSandals.createAttributes())

@@ -24,9 +24,9 @@ public class HermesWingedSandals extends Item implements IItemExtension {
 
     public static ItemAttributeModifiers createAttributes() {
         return ItemAttributeModifiers.builder()
-                .add(Attributes.ARMOR, new AttributeModifier(Identifier.fromNamespaceAndPath(Gods_of_olympus.MODID, "armor"), (double) 3.0F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.FEET)
-                .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(Identifier.fromNamespaceAndPath(Gods_of_olympus.MODID, "armor_toughness"), (double) 3.0F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.FEET)
-                .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(Identifier.fromNamespaceAndPath(Gods_of_olympus.MODID, "knockback_resistance"), (double) 0.10F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.FEET).build();
+                .add(Attributes.ARMOR, new AttributeModifier(Identifier.fromNamespaceAndPath(Gods_of_olympus.MODID, "hermes_armor"), (double) 3.0F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.FEET)
+                .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(Identifier.fromNamespaceAndPath(Gods_of_olympus.MODID, "hermes_armor_toughness"), (double) 3.0F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.FEET)
+                .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(Identifier.fromNamespaceAndPath(Gods_of_olympus.MODID, "hermes_knockback_resistance"), (double) 0.10F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.FEET).build();
     }
 
     @Override
