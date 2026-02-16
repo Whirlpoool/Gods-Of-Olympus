@@ -125,6 +125,7 @@ public class ModItems {
                             .component(DataComponents.EQUIPPABLE, Equippable.builder(EquipmentSlot.FEET).build())
                             .rarity(ModRarities.HERMES)
                             .enchantable(15)
+                            .attributes(HermesWingedSandals.createAttributes())
                             .durability(481) //SUBJECT TO CHANGE
             ));
 

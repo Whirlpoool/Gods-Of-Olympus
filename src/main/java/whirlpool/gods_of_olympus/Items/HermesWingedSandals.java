@@ -1,19 +1,32 @@
 package whirlpool.gods_of_olympus.Items;
 
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.neoforged.neoforge.common.extensions.IItemExtension;
 import org.jspecify.annotations.Nullable;
+import whirlpool.gods_of_olympus.Gods_of_olympus;
 
 public class HermesWingedSandals extends Item implements IItemExtension {
     public int FLIGHT_TIME = 1200; // 60 seconds in ticks (20 ticks per second)
 
     public HermesWingedSandals(Properties properties) {
         super(properties);
+    }
+
+    public static ItemAttributeModifiers createAttributes() {
+        return ItemAttributeModifiers.builder()
+                .add(Attributes.ARMOR, new AttributeModifier(Identifier.fromNamespaceAndPath(Gods_of_olympus.MODID, "armor"), (double) 3.0F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.FEET)
+                .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(Identifier.fromNamespaceAndPath(Gods_of_olympus.MODID, "armor_toughness"), (double) 3.0F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.FEET)
+                .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(Identifier.fromNamespaceAndPath(Gods_of_olympus.MODID, "knockback_resistance"), (double) 0.10F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.FEET).build();
     }
 
     @Override
