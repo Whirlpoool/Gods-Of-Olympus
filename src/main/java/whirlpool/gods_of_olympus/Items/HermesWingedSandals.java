@@ -2,6 +2,7 @@ package whirlpool.gods_of_olympus.Items;
 
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -14,10 +15,9 @@ import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.neoforged.neoforge.common.extensions.IItemExtension;
 import org.jspecify.annotations.Nullable;
 import whirlpool.gods_of_olympus.Gods_of_olympus;
+import whirlpool.gods_of_olympus.Registry.ModEffects;
 
 public class HermesWingedSandals extends Item implements IItemExtension {
-    public int FLIGHT_TIME = 1200; // 60 seconds in ticks (20 ticks per second)
-
     public HermesWingedSandals(Properties properties) {
         super(properties);
     }
@@ -32,18 +32,8 @@ public class HermesWingedSandals extends Item implements IItemExtension {
     @Override
     public void inventoryTick(ItemStack stack, ServerLevel level, Entity entity, @Nullable EquipmentSlot slot) {
         if(entity instanceof Player player && player.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof HermesWingedSandals hermesWingedSandals) {
-            if(player.onGround() && FLIGHT_TIME != 1200) {
-                FLIGHT_TIME = 1200; // Reset flight time when on the ground
-            }
-            if(FLIGHT_TIME > 0) {
-                player.getAbilities().mayfly = true;
-                player.onUpdateAbilities();
-            }else {
-                player.getAbilities().mayfly = false;
-                player.onUpdateAbilities();
-            }
-            if(player.getAbilities().flying) {
-                FLIGHT_TIME--;
+            if(player.onGround()) {
+                player.addEffect(new MobEffectInstance(ModEffects.FLIGHT, 1200, 0, false, false, false)); // Reset flight time when on the ground
             }
         }
     }

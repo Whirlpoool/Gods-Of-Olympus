@@ -1,12 +1,9 @@
 package whirlpool.gods_of_olympus;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.model.HumanoidModel;
-import net.minecraft.client.model.Model;
-import net.minecraft.client.resources.model.EquipmentClientInfo;
-import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -15,11 +12,14 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
-import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.entity.living.MobEffectEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import org.jetbrains.annotations.NotNull;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import org.slf4j.Logger;
+import whirlpool.gods_of_olympus.Effect.FlightEffect;
+import whirlpool.gods_of_olympus.Events.PlayerTickHandler;
+import whirlpool.gods_of_olympus.Registry.ModEffects;
 import whirlpool.gods_of_olympus.Registry.ModItems;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
@@ -37,6 +37,7 @@ public class Gods_of_olympus {
         modEventBus.addListener(this::commonSetup);
 
         ModItems.register(modEventBus);
+        ModEffects.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
