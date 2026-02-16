@@ -31,8 +31,8 @@ public class HadesHelmOfDarkness extends Item {
     @Override
     public void inventoryTick(ItemStack stack, ServerLevel level, Entity entity, @Nullable EquipmentSlot slot) {
         if (entity instanceof Player player) {
-            if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() == this) {
-                player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 20, 0, false, false, false));
+            if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof HadesHelmOfDarkness && !player.hasEffect(MobEffects.INVISIBILITY)) {
+                player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 1, 0, false, false, false));
             }
         }
     }
