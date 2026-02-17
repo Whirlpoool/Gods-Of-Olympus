@@ -7,5 +7,7 @@
   "item.gods_of_olympus.artemis_bow_of_the_hunt": "Artemis' Bow of the Hunt",
   "item.gods_of_olympus.ares_spear_of_war": "Ares' Spear of War",
   "item.gods_of_olympus.hermes_winged_sandals": "Hermes' Winged Sandals",
-  "item.gods_of_olympus.hephaestus_hammer_of_fire": "Hephaestus' Hammer of Fire"
+  "item.gods_of_olympus.hephaestus_hammer_of_fire": "Hephaestus' Hammer of Fire",
+
+  "effect.gods_of_olympus.flight": "Hermes' Flight"
 }

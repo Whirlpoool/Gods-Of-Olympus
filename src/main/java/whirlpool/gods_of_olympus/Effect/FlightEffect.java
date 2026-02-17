@@ -9,8 +9,6 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.neoforged.neoforge.client.extensions.common.IClientMobEffectExtensions;
-import net.neoforged.neoforge.event.tick.PlayerTickEvent;
-import whirlpool.gods_of_olympus.Registry.ModEffects;
 
 public class FlightEffect extends MobEffect implements IClientMobEffectExtensions {
     public FlightEffect(MobEffectCategory category, int color) {
