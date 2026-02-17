@@ -3,6 +3,7 @@ package whirlpool.gods_of_olympus.Items;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -33,7 +34,10 @@ public class HermesWingedSandals extends Item implements IItemExtension {
     public void inventoryTick(ItemStack stack, ServerLevel level, Entity entity, @Nullable EquipmentSlot slot) {
         if(entity instanceof Player player && player.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof HermesWingedSandals hermesWingedSandals) {
             if(player.onGround()) {
-                player.addEffect(new MobEffectInstance(ModEffects.FLIGHT, 1200, 0, false, false, false)); // Reset flight time when on the ground
+                player.addEffect(new MobEffectInstance(ModEffects.FLIGHT, MobEffectInstance.INFINITE_DURATION, 0, false, false, false)); // Reset flight time when on the ground
+            }else if(!player.onGround() && player.getEffect(ModEffects.FLIGHT) != null && player.getEffect(ModEffects.FLIGHT).isInfiniteDuration()) {
+                player.removeEffect(ModEffects.FLIGHT);
+                player.addEffect(new MobEffectInstance(ModEffects.FLIGHT, 1200, 0, false, false, false));
             }
         }
     }

@@ -15,6 +15,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import org.jspecify.annotations.Nullable;
 import whirlpool.gods_of_olympus.Gods_of_olympus;
+import whirlpool.gods_of_olympus.Registry.ModEffects;
 
 public class HadesHelmOfDarkness extends Item {
     public HadesHelmOfDarkness(Properties properties) {
@@ -30,6 +31,7 @@ public class HadesHelmOfDarkness extends Item {
 
     @Override
     public void inventoryTick(ItemStack stack, ServerLevel level, Entity entity, @Nullable EquipmentSlot slot) {
+        if(level.isClientSide()) { return; }
         if (entity instanceof Player player) {
             if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof HadesHelmOfDarkness && !player.hasEffect(MobEffects.INVISIBILITY)) {
                 player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 1, 0, false, false, false));

@@ -7,8 +7,10 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import whirlpool.gods_of_olympus.Gods_of_olympus;
+import whirlpool.gods_of_olympus.Items.HadesHelmOfDarkness;
 import whirlpool.gods_of_olympus.Items.HermesWingedSandals;
 import whirlpool.gods_of_olympus.Registry.ModEffects;
+import whirlpool.gods_of_olympus.Registry.ModItems;
 
 @EventBusSubscriber(modid = Gods_of_olympus.MODID)
 public class PlayerTickHandler {

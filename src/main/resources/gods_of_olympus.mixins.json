@@ -7,6 +7,7 @@
     "SpecialModelRenderersMixin"
   ],
   "client": [
+    "EntityRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
