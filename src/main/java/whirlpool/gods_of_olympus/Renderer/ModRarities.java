@@ -2,7 +2,6 @@ package whirlpool.gods_of_olympus.Renderer;
 
 import net.minecraft.world.item.Rarity;
 import whirlpool.gods_of_olympus.ExtendedEnums.ExtendedRarities;
-import whirlpool.gods_of_olympus.Gods_of_olympus;
 
 /**
  * A central collection of all custom Item Rarities added by the Gods of Olympus

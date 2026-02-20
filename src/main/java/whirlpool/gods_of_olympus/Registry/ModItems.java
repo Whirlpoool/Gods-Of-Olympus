@@ -7,6 +7,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.component.Weapon;
+import net.minecraft.world.item.equipment.EquipmentAsset;
 import net.minecraft.world.item.equipment.EquipmentAssets;
 import net.minecraft.world.item.equipment.Equippable;
 import net.neoforged.bus.api.IEventBus;
@@ -26,6 +27,7 @@ import whirlpool.gods_of_olympus.Renderer.ModRarities;
 public class ModItems {
     // DeferredRegister for Items. Acts as a holding list for all items before they are registered to the game.
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Gods_of_olympus.MODID);
+    public static final ResourceKey<EquipmentAsset> OLYMPUS =  ResourceKey.create(EquipmentAssets.ROOT_ID, Identifier.fromNamespaceAndPath(Gods_of_olympus.MODID, "olympus"));
 
     /**
      * Poseidon's Trident.

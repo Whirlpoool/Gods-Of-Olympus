@@ -3,7 +3,6 @@ package whirlpool.gods_of_olympus.Items;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -33,8 +32,8 @@ public class HadesHelmOfDarkness extends Item {
     public void inventoryTick(ItemStack stack, ServerLevel level, Entity entity, @Nullable EquipmentSlot slot) {
         if(level.isClientSide()) { return; }
         if (entity instanceof Player player) {
-            if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof HadesHelmOfDarkness && !player.hasEffect(MobEffects.INVISIBILITY)) {
-                player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 1, 0, false, false, false));
+            if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof HadesHelmOfDarkness && !player.hasEffect(ModEffects.HADES_INVIS)) {
+                player.addEffect(new MobEffectInstance(ModEffects.HADES_INVIS, MobEffectInstance.INFINITE_DURATION, 0, false, false, false));
             }
         }
     }

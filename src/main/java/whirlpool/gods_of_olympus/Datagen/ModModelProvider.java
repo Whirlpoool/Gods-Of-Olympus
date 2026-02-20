@@ -25,8 +25,6 @@ public class ModModelProvider extends ModelProvider {
             ModItems.AEGIS_SHEILD_OF_ATHENA,
             ModItems.APOLLOS_BOW_OF_LIGHT,
             ModItems.ARES_SPEAR_OF_WAR,
-            ModItems.HADES_HELM_OF_DARKNESS,
-            ModItems.HERMES_WINGED_SANDALS,
             ModItems.ZEUS_MASTER_BOLT
     );
 
@@ -37,6 +35,9 @@ public class ModModelProvider extends ModelProvider {
     @Override
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
         for(DeferredItem<Item> item : flatItemModels) { itemModels.generateFlatItem(item.get(), ModelTemplates.FLAT_ITEM); }
+
+        itemModels.generateTrimmableItem(ModItems.HADES_HELM_OF_DARKNESS.get(), ModItems.OLYMPUS, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModels.generateTrimmableItem(ModItems.HERMES_WINGED_SANDALS.get(), ModItems.OLYMPUS, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
     }
 
     @Override

@@ -1,6 +1,5 @@
 package whirlpool.gods_of_olympus.Events;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -10,7 +9,6 @@ import whirlpool.gods_of_olympus.Gods_of_olympus;
 import whirlpool.gods_of_olympus.Items.HadesHelmOfDarkness;
 import whirlpool.gods_of_olympus.Items.HermesWingedSandals;
 import whirlpool.gods_of_olympus.Registry.ModEffects;
-import whirlpool.gods_of_olympus.Registry.ModItems;
 
 @EventBusSubscriber(modid = Gods_of_olympus.MODID)
 public class PlayerTickHandler {
@@ -22,6 +20,9 @@ public class PlayerTickHandler {
             player.removeEffect(ModEffects.FLIGHT);
         }
 
+        if (!(player.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof HadesHelmOfDarkness)) {
+            player.removeEffect(ModEffects.HADES_INVIS);
+        }
 
         if(!player.hasEffect(ModEffects.FLIGHT) && !player.isCreative() && !player.isSpectator()) {
             player.getAbilities().mayfly = false;

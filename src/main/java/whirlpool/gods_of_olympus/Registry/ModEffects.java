@@ -15,6 +15,9 @@ public class ModEffects {
     public static final Holder<MobEffect> FLIGHT = MOB_EFFECTS.register("flight", () ->
             new FlightEffect(MobEffectCategory.BENEFICIAL, 0xFFFAF0));
 
+    public static final Holder<MobEffect> HADES_INVIS = MOB_EFFECTS.register("hades_invis", () ->
+            new FlightEffect(MobEffectCategory.BENEFICIAL, 0xFFFAF0));
+
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);
     }

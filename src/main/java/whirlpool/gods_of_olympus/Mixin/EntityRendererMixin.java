@@ -1,19 +1,21 @@
 package whirlpool.gods_of_olympus.Mixin;
 
-import net.minecraft.client.renderer.entity.player.AvatarRenderer;
-import net.minecraft.client.renderer.entity.state.AvatarRenderState;
+import net.minecraft.client.renderer.culling.Frustum;
+import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.player.Player;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import whirlpool.gods_of_olympus.Items.HadesHelmOfDarkness;
 
-@Mixin(AvatarRenderer.class)
+@Mixin(EntityRenderer.class)
 public class EntityRendererMixin<T extends Entity> {
-    @Inject(method = "shouldRenderLayers", at = @At("HEAD"), cancellable = true)
-    public void isInvisibleCancel(AvatarRenderState state, CallbackInfoReturnable<Boolean> cir) {
-        if (state.headEquipment.getItem() instanceof HadesHelmOfDarkness) {
+    @Inject(method = "shouldRender", at = @At("HEAD"), cancellable = true)
+    public void isInvisibleCancel(T entity, Frustum camera, double camX, double camY, double camZ, CallbackInfoReturnable<Boolean> cir) {
+        if (entity instanceof Player player && player.getItemBySlot(EquipmentSlot.HEAD).getItem() instanceof HadesHelmOfDarkness) {
             cir.setReturnValue(false);
         }
     }

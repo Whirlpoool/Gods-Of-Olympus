@@ -19,6 +19,7 @@ public class DataGenerators {
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
         generator.addProvider(true, new ModModelProvider(packOutput));
+        generator.addProvider(true, new ModItemTagsProvider(packOutput, lookupProvider));
     }
 
     @SubscribeEvent
