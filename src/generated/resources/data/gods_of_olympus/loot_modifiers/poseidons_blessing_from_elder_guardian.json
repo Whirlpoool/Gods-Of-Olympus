@@ -1,0 +1,10 @@
+{
+  "type": "gods_of_olympus:add_item",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:entities/elder_guardian"
+    }
+  ],
+  "item": "gods_of_olympus:blessing_of_poseidon"
+}

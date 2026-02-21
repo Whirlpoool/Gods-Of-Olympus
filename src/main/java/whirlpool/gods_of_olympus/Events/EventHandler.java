@@ -1,14 +1,26 @@
 package whirlpool.gods_of_olympus.Events;
 
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.npc.villager.VillagerProfession;
+import net.minecraft.world.entity.npc.villager.VillagerTrades;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.trading.ItemCost;
+import net.minecraft.world.item.trading.MerchantOffer;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.neoforge.event.village.VillagerTradesEvent;
+import net.neoforged.neoforge.event.village.WandererTradesEvent;
 import whirlpool.gods_of_olympus.Gods_of_olympus;
 import whirlpool.gods_of_olympus.Items.HadesHelmOfDarkness;
 import whirlpool.gods_of_olympus.Items.HermesWingedSandals;
 import whirlpool.gods_of_olympus.Registry.ModEffects;
+import whirlpool.gods_of_olympus.Registry.ModItems;
+
+import java.util.List;
+import java.util.Optional;
 
 @EventBusSubscriber(modid = Gods_of_olympus.MODID)
 public class EventHandler {
@@ -29,5 +41,16 @@ public class EventHandler {
             player.getAbilities().flying = false;
             player.onUpdateAbilities();
         }
+    }
+
+    @SubscribeEvent
+    public static void addCustomTrades(WandererTradesEvent event) {
+        List<VillagerTrades.ItemListing> genericTrades = event.getGenericTrades();
+        List<VillagerTrades.ItemListing> rareTrades = event.getRareTrades();
+
+        rareTrades.add((level,entity, randomSource) -> new MerchantOffer(
+                new ItemCost(Items.EMERALD, 64),
+                Optional.of(new ItemCost(Items.PHANTOM_MEMBRANE, 1)),
+                new ItemStack(ModItems.BLESSING_OF_HERMES.get(), 1), 1, 10, 0.2f));
     }
 }

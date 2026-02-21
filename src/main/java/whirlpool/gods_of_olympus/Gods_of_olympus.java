@@ -15,6 +15,7 @@ import whirlpool.gods_of_olympus.Registry.ModCreativeTabs;
 import whirlpool.gods_of_olympus.Registry.ModEffects;
 import whirlpool.gods_of_olympus.Registry.ModEntities;
 import whirlpool.gods_of_olympus.Registry.ModItems;
+import whirlpool.gods_of_olympus.loot.ModLootModifiers;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(Gods_of_olympus.MODID)
@@ -34,6 +35,7 @@ public class Gods_of_olympus {
         ModEffects.register(modEventBus);
         ModEntities.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
