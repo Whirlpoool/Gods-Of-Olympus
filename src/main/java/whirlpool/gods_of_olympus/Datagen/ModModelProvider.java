@@ -25,7 +25,11 @@ public class ModModelProvider extends ModelProvider {
             ModItems.AEGIS_SHEILD_OF_ATHENA,
             ModItems.APOLLOS_BOW_OF_LIGHT,
             ModItems.ARES_SPEAR_OF_WAR,
-            ModItems.ZEUS_MASTER_BOLT
+            ModItems.ZEUS_MASTER_BOLT,
+            ModItems.BLESSING_OF_POSEIDON,
+            ModItems.BLESSING_OF_HADES,
+            ModItems.BLESSING_OF_HERMES,
+            ModItems.BLESSING_OF_OLYMPUS
     );
 
     public ModModelProvider(PackOutput output) {
@@ -36,8 +40,8 @@ public class ModModelProvider extends ModelProvider {
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
         for(DeferredItem<Item> item : flatItemModels) { itemModels.generateFlatItem(item.get(), ModelTemplates.FLAT_ITEM); }
 
-        itemModels.generateTrimmableItem(ModItems.HADES_HELM_OF_DARKNESS.get(), ModItems.OLYMPUS, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
-        itemModels.generateTrimmableItem(ModItems.HERMES_WINGED_SANDALS.get(), ModItems.OLYMPUS, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
+        itemModels.generateTrimmableItem(ModItems.HADES_HELM_OF_DARKNESS.get(), ModItems.OLYMPUS_EQUIPMENT_ASSET, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModels.generateTrimmableItem(ModItems.HERMES_WINGED_SANDALS.get(), ModItems.OLYMPUS_EQUIPMENT_ASSET, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
     }
 
     @Override

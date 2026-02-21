@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": "gods_of_olympus:blessing_of_poseidon",
+    "G": "minecraft:gold_block",
+    "O": "gods_of_olympus:blessing_of_olympus",
+    "S": "minecraft:heart_of_the_sea"
+  },
+  "pattern": [
+    "GOG",
+    " B ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "gods_of_olympus:poseidons_trident"
+  }
+}

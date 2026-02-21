@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blessing_of_hades": {
+      "conditions": {
+        "items": [
+          {
+            "items": "gods_of_olympus:blessing_of_hades"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "gods_of_olympus:hades_helm_of_darkness_smithing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_blessing_of_hades"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "gods_of_olympus:hades_helm_of_darkness_smithing"
+    ]
+  }
+}

@@ -9,7 +9,15 @@
   "item.gods_of_olympus.hermes_winged_sandals": "Hermes' Winged Sandals",
   "item.gods_of_olympus.hephaestus_hammer_of_fire": "Hephaestus' Hammer of Fire",
 
+
+  "item.gods_of_olympus.blessing_of_poseidon": "Poseidon's Blessing",
+  "item.gods_of_olympus.blessing_of_olympus": "Olympus' Blessing",
+  "item.gods_of_olympus.blessing_of_hades": "Hades' Blessing",
+  "item.gods_of_olympus.blessing_of_hermes": "Hermes' Blessing",
+
   "effect.gods_of_olympus.flight": "Hermes' Flight",
   "effect.gods_of_olympus.hades_invis": "Hades' Invisibility",
-  "effect.gods_of_olympus.drowning": "Drowning"
+  "effect.gods_of_olympus.drowning": "Drowning",
+
+  "creativetab.gods_of_olympus.gods_of_olympus_tab": "Gods of Olympus"
 }

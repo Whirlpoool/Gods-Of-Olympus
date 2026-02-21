@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "gods_of_olympus:blessing_of_hermes",
+  "base": "minecraft:netherite_boots",
+  "result": {
+    "id": "gods_of_olympus:hermes_winged_sandals"
+  },
+  "template": "gods_of_olympus:blessing_of_olympus"
+}

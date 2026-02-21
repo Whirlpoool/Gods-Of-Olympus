@@ -34,7 +34,7 @@ public class HermesWingedSandals extends Item implements IItemExtension {
         if(entity instanceof Player player && player.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof HermesWingedSandals hermesWingedSandals) {
             if(player.onGround()) {
                 player.addEffect(new MobEffectInstance(ModEffects.FLIGHT, MobEffectInstance.INFINITE_DURATION, 0, false, false, false)); // Reset flight time when on the ground
-            }else if(!player.onGround() && player.getEffect(ModEffects.FLIGHT) != null && player.getEffect(ModEffects.FLIGHT).isInfiniteDuration()) {
+            }else if(player.getAbilities().flying && player.getEffect(ModEffects.FLIGHT) != null && player.getEffect(ModEffects.FLIGHT).isInfiniteDuration()) {
                 player.removeEffect(ModEffects.FLIGHT);
                 player.addEffect(new MobEffectInstance(ModEffects.FLIGHT, 1200, 0, false, false, false));
             }

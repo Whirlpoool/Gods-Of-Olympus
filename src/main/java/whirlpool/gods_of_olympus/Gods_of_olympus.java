@@ -11,6 +11,7 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
+import whirlpool.gods_of_olympus.Registry.ModCreativeTabs;
 import whirlpool.gods_of_olympus.Registry.ModEffects;
 import whirlpool.gods_of_olympus.Registry.ModEntities;
 import whirlpool.gods_of_olympus.Registry.ModItems;
@@ -32,6 +33,7 @@ public class Gods_of_olympus {
         ModItems.register(modEventBus);
         ModEffects.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModCreativeTabs.register(modEventBus);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

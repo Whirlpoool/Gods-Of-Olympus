@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "gods_of_olympus:blessing_of_hades",
+  "base": "minecraft:netherite_helmet",
+  "result": {
+    "id": "gods_of_olympus:hades_helm_of_darkness"
+  },
+  "template": "gods_of_olympus:blessing_of_olympus"
+}

@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.component.Weapon;
 import net.minecraft.world.item.equipment.EquipmentAsset;
 import net.minecraft.world.item.equipment.EquipmentAssets;
@@ -27,7 +28,7 @@ import whirlpool.gods_of_olympus.Renderer.ModRarities;
 public class ModItems {
     // DeferredRegister for Items. Acts as a holding list for all items before they are registered to the game.
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Gods_of_olympus.MODID);
-    public static final ResourceKey<EquipmentAsset> OLYMPUS =  ResourceKey.create(EquipmentAssets.ROOT_ID, Identifier.fromNamespaceAndPath(Gods_of_olympus.MODID, "olympus"));
+    public static final ResourceKey<EquipmentAsset> OLYMPUS_EQUIPMENT_ASSET =  ResourceKey.create(EquipmentAssets.ROOT_ID, Identifier.fromNamespaceAndPath(Gods_of_olympus.MODID, "olympus"));
 
     /**
      * Poseidon's Trident.
@@ -146,6 +147,46 @@ public class ModItems {
                     properties
                             .rarity(ModRarities.HEPHAESTUS)
                             .durability(1000) //SUBJECT TO CHANGE
+            ));
+
+    /**
+     * Blessing of Poseidon.
+     * Currently registered as a generic Item with Poseidon rarity.
+     */
+    public static final DeferredItem<Item> BLESSING_OF_POSEIDON = ITEMS.registerItem("blessing_of_poseidon",
+            properties -> new Item(
+                    properties
+                            .rarity(ModRarities.POSEIDON)
+                            .stacksTo(64)
+            ));
+
+    /**
+     * Blessing of Hermes.
+     * Currently registered as a generic Item with Hermes rarity.
+     */
+    public static final DeferredItem<Item> BLESSING_OF_HERMES = ITEMS.registerItem("blessing_of_hermes",
+            properties -> new Item(
+                    properties
+                            .rarity(ModRarities.HERMES)
+                            .stacksTo(64)
+            ));
+
+    /**
+     * Blessing of Hades.
+     * Currently registered as a generic Item with Hades rarity.
+     */
+    public static final DeferredItem<Item> BLESSING_OF_HADES = ITEMS.registerItem("blessing_of_hades",
+            properties -> new Item(
+                    properties
+                            .rarity(ModRarities.HADES)
+                            .stacksTo(64)
+            ));
+
+    public static final DeferredItem<Item> BLESSING_OF_OLYMPUS = ITEMS.registerItem("blessing_of_olympus",
+            properties -> new Item(
+                    properties
+                            .rarity(Rarity.EPIC)
+                            .stacksTo(64)
             ));
 
     /**
