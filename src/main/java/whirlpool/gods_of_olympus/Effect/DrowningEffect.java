@@ -20,7 +20,10 @@ public class DrowningEffect extends MobEffect {
             if(entity.canDrownInFluidType(Fluids.WATER.getFluidType())) {
                 level.broadcastEntityEvent(entity, (byte) 67);
                 entity.hurtServer(level, entity.damageSources().drown(), 1.0F);
-            }
+            }/*else if(entity instanceof Zombie zombie && !(entity instanceof Drowned)) {
+                zombie.setInWaterTime(600);
+                zombie.setConversionTime(3);
+            }*///Problem for another day, this is supposed to turn zombies into drowned, but it doesn't work for some reason.
         }
         // Return true so the effect continues to tick
         return true;
@@ -28,6 +31,11 @@ public class DrowningEffect extends MobEffect {
 
     @Override
     public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
-        return true;
+        int k = 20 >> amplifier;
+        if (k > 0) {
+            return duration % k == 0;
+        } else {
+            return true;
+        }
     }
 }

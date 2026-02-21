@@ -11,6 +11,7 @@ import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.entity.state.ThrownTridentRenderState;
 import net.minecraft.client.renderer.feature.ModelFeatureRenderer;
 import net.minecraft.client.renderer.rendertype.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.client.renderer.state.CameraRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
@@ -32,11 +33,13 @@ public class HydroTridentRenderer extends EntityRenderer<ThrownHydroTrident, Thr
         poseStack.pushPose();
         poseStack.mulPose(Axis.YP.rotationDegrees(renderState.yRot - 90.0F));
         poseStack.mulPose(Axis.ZP.rotationDegrees(renderState.xRot + 90.0F));
+        RenderType renderType = RenderTypes.entityTranslucentEmissive(ModModelLayers.HYDRO_TRIDENT_TEXTURE);
         List<RenderType> list = ItemRenderer.getFoilRenderTypes(this.model.renderType(ModModelLayers.HYDRO_TRIDENT_TEXTURE), false, renderState.isFoil);
 
-        for(int i = 0; i < list.size(); ++i) {
+        for(int i = 0; i < list.size(); i++) {
             submitNodeCollector.order(i).submitModel(this.model, Unit.INSTANCE, poseStack, (RenderType)list.get(i), renderState.lightCoords, OverlayTexture.NO_OVERLAY, -1, (TextureAtlasSprite)null, renderState.outlineColor, (ModelFeatureRenderer.CrumblingOverlay)null);
         }
+        submitNodeCollector.submitModel(this.model, Unit.INSTANCE, poseStack, renderType, renderState.lightCoords, OverlayTexture.NO_OVERLAY, -1, (TextureAtlasSprite)null, renderState.outlineColor, (ModelFeatureRenderer.CrumblingOverlay)null);
 
         poseStack.popPose();
         super.submit(renderState, poseStack, submitNodeCollector, cameraRenderState);
