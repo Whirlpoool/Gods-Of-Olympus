@@ -19,7 +19,7 @@ public class DrowningEffect extends MobEffect {
 
             if(entity.canDrownInFluidType(Fluids.WATER.getFluidType())) {
                 level.broadcastEntityEvent(entity, (byte) 67);
-                entity.hurtServer(level, entity.damageSources().drown(), 1.0F);
+                entity.hurtServer(level, entity.damageSources().drown(), 2.0F);
             }/*else if(entity instanceof Zombie zombie && !(entity instanceof Drowned)) {
                 zombie.setInWaterTime(600);
                 zombie.setConversionTime(3);

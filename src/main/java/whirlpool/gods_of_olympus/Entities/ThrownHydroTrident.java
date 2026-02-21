@@ -123,7 +123,7 @@ public class ThrownHydroTrident extends AbstractArrow {
             if (entity instanceof LivingEntity) {
                 LivingEntity livingentity = (LivingEntity)entity;
 
-                livingentity.addEffect(new MobEffectInstance(ModEffects.DROWNING, 50, 0, false, false, false));
+                livingentity.addEffect(new MobEffectInstance(ModEffects.DROWNING, 100, 0, false, false, false));
 
                 this.doKnockback(livingentity, damagesource);
                 this.doPostHurtEffects(livingentity);
