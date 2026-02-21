@@ -11,7 +11,7 @@ import whirlpool.gods_of_olympus.Items.HermesWingedSandals;
 import whirlpool.gods_of_olympus.Registry.ModEffects;
 
 @EventBusSubscriber(modid = Gods_of_olympus.MODID)
-public class PlayerTickHandler {
+public class EventHandler {
     @SubscribeEvent
     public static void onPlayerTick(PlayerTickEvent.Post event) {
         Player player = event.getEntity();
