@@ -14,6 +14,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.neoforged.neoforge.common.extensions.IItemExtension;
 import org.jspecify.annotations.Nullable;
+import whirlpool.gods_of_olympus.Config;
 import whirlpool.gods_of_olympus.Gods_of_olympus;
 import whirlpool.gods_of_olympus.Registry.ModEffects;
 
@@ -36,7 +37,7 @@ public class HermesWingedSandals extends Item implements IItemExtension {
                 player.addEffect(new MobEffectInstance(ModEffects.FLIGHT, MobEffectInstance.INFINITE_DURATION, 0, false, false, false)); // Reset flight time when on the ground
             }else if(player.getAbilities().flying && player.getEffect(ModEffects.FLIGHT) != null && player.getEffect(ModEffects.FLIGHT).isInfiniteDuration()) {
                 player.removeEffect(ModEffects.FLIGHT);
-                player.addEffect(new MobEffectInstance(ModEffects.FLIGHT, 1200, 0, false, false, false));
+                player.addEffect(new MobEffectInstance(ModEffects.FLIGHT, Config.HERMES_FLIGHT_LENGTH.get() * 20, 0, false, false, false));
             }
         }
     }

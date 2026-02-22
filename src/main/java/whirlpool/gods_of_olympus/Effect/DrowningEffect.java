@@ -3,7 +3,10 @@ package whirlpool.gods_of_olympus.Effect;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.monster.zombie.Drowned;
+import net.minecraft.world.entity.monster.zombie.Zombie;
 import net.minecraft.world.level.material.Fluids;
 
 public class DrowningEffect extends MobEffect {
@@ -20,10 +23,9 @@ public class DrowningEffect extends MobEffect {
             if(entity.canDrownInFluidType(Fluids.WATER.getFluidType())) {
                 level.broadcastEntityEvent(entity, (byte) 67);
                 entity.hurtServer(level, entity.damageSources().drown(), 2.0F);
-            }/*else if(entity instanceof Zombie zombie && !(entity instanceof Drowned)) {
-                zombie.setInWaterTime(600);
-                zombie.setConversionTime(3);
-            }*///Problem for another day, this is supposed to turn zombies into drowned, but it doesn't work for some reason.
+            }else if(entity instanceof Zombie zombie && !(entity instanceof Drowned)) {
+                zombie.convertToZombieType(level, EntityType.DROWNED);
+            }//Convert zombies to drowned if they are affected by the drowning effect and are not already drowned.
         }
         // Return true so the effect continues to tick
         return true;
