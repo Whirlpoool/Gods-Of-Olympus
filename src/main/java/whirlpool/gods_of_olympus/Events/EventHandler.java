@@ -10,6 +10,7 @@ import net.minecraft.world.item.trading.ItemCost;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.entity.living.LivingChangeTargetEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
 import net.neoforged.neoforge.event.village.WandererTradesEvent;
@@ -52,5 +53,21 @@ public class EventHandler {
                 new ItemCost(Items.EMERALD, 64),
                 Optional.of(new ItemCost(Items.PHANTOM_MEMBRANE, 1)),
                 new ItemStack(ModItems.BLESSING_OF_HERMES.get(), 1), 1, 10, 0.2f));
+    }
+
+    @SubscribeEvent
+    public static void onMobTarget(LivingChangeTargetEvent event) {
+        // Check if the entity being targeted is a player
+        if (event.getNewAboutToBeSetTarget() instanceof Player player) {
+
+            // Check if the player has your specific effect
+            if (player.hasEffect(ModEffects.HADES_INVIS)) {
+                // If the player hasn't hit this mob yet, stop the mob from targeting them
+                // We check the mob's 'LastHurtByMob' to see if the player is the aggressor
+                if (event.getEntity().getLastHurtByMob() != player) {
+                    event.setCanceled(true);
+                }
+            }
+        }
     }
 }
