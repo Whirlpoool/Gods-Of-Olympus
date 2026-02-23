@@ -1,2 +1,6 @@
-// 1.21.11	2026-02-19T20:52:05.9827058	Tags for minecraft:item mod id gods_of_olympus
+// 1.21.11	2026-02-22T20:38:55.9285739	Tags for minecraft:item mod id gods_of_olympus
+19cdedb81aafb366ce33dfd3e951980181f177bb data/minecraft/tags/item/enchantable/durability.json
+19cdedb81aafb366ce33dfd3e951980181f177bb data/minecraft/tags/item/enchantable/trident.json
+57eacf50da113bb5efa684d7a36c9413e11d66d3 data/minecraft/tags/item/foot_armor.json
+fbf1377bf66bbdf0f8c7cdeb0e23a640a4220de0 data/minecraft/tags/item/head_armor.json
 2aef8a1b183ef76f113e2c240c667aaf8cfce571 data/minecraft/tags/item/trimmable_armor.json

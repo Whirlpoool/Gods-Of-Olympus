@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/bow",
+  "textures": {
+    "layer0": "gods_of_olympus:item/apollos_bow_of_light_pulling_2"
+  }
+}

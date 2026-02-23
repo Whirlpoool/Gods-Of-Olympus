@@ -20,5 +20,16 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(ModItems.HADES_HELM_OF_DARKNESS.asItem())
                 .add(ModItems.HERMES_WINGED_SANDALS.asItem())
         ;
+
+        tag(ItemTags.HEAD_ARMOR)
+                .add(ModItems.HADES_HELM_OF_DARKNESS.asItem())
+        ;
+
+        tag(ItemTags.FOOT_ARMOR)
+                .add(ModItems.HERMES_WINGED_SANDALS.asItem())
+        ;
+
+        tag(ItemTags.TRIDENT_ENCHANTABLE).add(ModItems.POSEIDONS_TRIDENT.asItem());
+        tag(ItemTags.DURABILITY_ENCHANTABLE).add(ModItems.POSEIDONS_TRIDENT.asItem());
     }
 }

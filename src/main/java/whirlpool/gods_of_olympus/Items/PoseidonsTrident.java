@@ -3,6 +3,7 @@ package whirlpool.gods_of_olympus.Items;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Position;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -24,11 +25,15 @@ import net.minecraft.world.entity.projectile.arrow.ThrownTrident;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TridentItem;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import whirlpool.gods_of_olympus.Entities.ThrownHydroTrident;
+
+import java.util.Set;
 
 /**
  * A custom trident item representing Poseidon's Trident.
@@ -163,5 +168,10 @@ public class PoseidonsTrident extends TridentItem {
         ThrownHydroTrident throwntrident = new ThrownHydroTrident(level, position.x(), position.y(), position.z(), itemStack);
 
         return throwntrident;
+    }
+
+    @Override
+    public boolean supportsEnchantment(ItemStack stack, Holder<Enchantment> enchantment) {
+        return super.supportsEnchantment(stack, enchantment) && !(enchantment.is(Enchantments.RIPTIDE) || enchantment.is(Enchantments.CHANNELING) || enchantment.is(Enchantments.LOYALTY));
     }
 }

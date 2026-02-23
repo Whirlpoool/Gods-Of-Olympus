@@ -5,6 +5,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.component.Weapon;
@@ -15,6 +16,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import whirlpool.gods_of_olympus.Gods_of_olympus;
+import whirlpool.gods_of_olympus.Items.ApollosBowOfLight;
 import whirlpool.gods_of_olympus.Items.HadesHelmOfDarkness;
 import whirlpool.gods_of_olympus.Items.HermesWingedSandals;
 import whirlpool.gods_of_olympus.Items.PoseidonsTrident;
@@ -50,7 +52,7 @@ public class ModItems {
                             .durability(1000)
                             .attributes(PoseidonsTrident.createAttributes())
                             .component(DataComponents.TOOL, PoseidonsTrident.createToolProperties())
-                            .enchantable(5)
+                            .enchantable(15)
                             .component(DataComponents.WEAPON, new Weapon(1))
             ));
     
@@ -75,6 +77,7 @@ public class ModItems {
                             .component(DataComponents.EQUIPPABLE, Equippable.builder(EquipmentSlot.HEAD).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE)
                                     .setAsset(ResourceKey.create(EquipmentAssets.ROOT_ID, Identifier.fromNamespaceAndPath(Gods_of_olympus.MODID, "hades_helm_of_darkness"))).build())
                             .rarity(ModRarities.HADES)
+                            .enchantable(15)
                             .attributes(HadesHelmOfDarkness.createAttributes())
                             .durability(1000) //SUBJECT TO CHANGE
             ));
@@ -95,7 +98,7 @@ public class ModItems {
      * Currently registered as a generic Item with EPIC rarity.
      */
     public static final DeferredItem<Item> APOLLOS_BOW_OF_LIGHT = ITEMS.registerItem("apollos_bow_of_light",
-            properties -> new Item(
+            properties -> new ApollosBowOfLight(
                     properties
                             .rarity(ModRarities.APOLLO)
                             .durability(1000) //SUBJECT TO CHANGE
