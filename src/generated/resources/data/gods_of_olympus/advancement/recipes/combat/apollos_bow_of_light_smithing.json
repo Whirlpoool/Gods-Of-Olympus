@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blessing_of_apollo": {
+      "conditions": {
+        "items": [
+          {
+            "items": "gods_of_olympus:blessing_of_apollo"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "gods_of_olympus:apollos_bow_of_light_smithing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_blessing_of_apollo"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "gods_of_olympus:apollos_bow_of_light_smithing"
+    ]
+  }
+}

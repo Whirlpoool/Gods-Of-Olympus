@@ -28,5 +28,10 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
                 new AddItemModifier(new LootItemCondition[] {
                         new LootTableIdCondition.Builder(Identifier.withDefaultNamespace("entities/wither")).build()
                 }, ModItems.BLESSING_OF_HADES.get()));
+
+        add("apollos_blessing_from_wither",
+                new AddItemModifier(new LootItemCondition[] {
+                        new LootTableIdCondition.Builder(Identifier.withDefaultNamespace("entities/evoker")).build()
+                }, ModItems.BLESSING_OF_APOLLO.get()));
     }
 }

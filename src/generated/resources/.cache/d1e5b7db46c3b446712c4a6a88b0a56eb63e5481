@@ -1,7 +1,9 @@
-// 1.21.11	2026-02-21T16:12:35.415153	My Recipes
+// 1.21.11	2026-02-23T18:38:11.2999892	My Recipes
+fb107046bf8569cc200f2f422cb455f189d896be data/gods_of_olympus/advancement/recipes/combat/apollos_bow_of_light_smithing.json
 5001916806c263a9188fd15df399dc7f33399081 data/gods_of_olympus/advancement/recipes/combat/hades_helm_of_darkness_smithing.json
 65c552f1184fcf20801ae2ba4671180fdb6a7d48 data/gods_of_olympus/advancement/recipes/combat/hermes_winged_sandals_smithing.json
 bd8e39b51705785b355bc9e288989a23f31b14c3 data/gods_of_olympus/advancement/recipes/combat/poseidons_trident.json
+ae504abb291537a06506ad8e6206e6487a786803 data/gods_of_olympus/recipe/apollos_bow_of_light_smithing.json
 aad83f70fdd7c1216dc4b6406a9be5e8733a8459 data/gods_of_olympus/recipe/hades_helm_of_darkness_smithing.json
 0fc72bfda7a4e02773768320b6730cff6d43d83f data/gods_of_olympus/recipe/hermes_winged_sandals_smithing.json
 3dd214c41485c83fd23ee56d4fa44ba60daac4a2 data/gods_of_olympus/recipe/poseidons_trident.json

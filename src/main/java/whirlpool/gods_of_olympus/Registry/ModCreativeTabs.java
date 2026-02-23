@@ -33,6 +33,7 @@ public class ModCreativeTabs {
                 output.accept(ModItems.BLESSING_OF_POSEIDON);
                 output.accept(ModItems.BLESSING_OF_HADES);
                 output.accept(ModItems.BLESSING_OF_HERMES);
+                output.accept(ModItems.BLESSING_OF_APOLLO);
             }).build());
 
     public static void register(IEventBus eventBus) {

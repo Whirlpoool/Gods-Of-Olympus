@@ -1,4 +1,5 @@
-// 1.21.11	2026-02-21T18:29:07.234502	Global Loot Modifiers : gods_of_olympus
+// 1.21.11	2026-02-23T18:38:11.3029998	Global Loot Modifiers : gods_of_olympus
+4c16061d5e1cb00cbe1beb4973ab75c08c82dd1c data/gods_of_olympus/loot_modifiers/apollos_blessing_from_wither.json
 e91628cfa7775ed097007464cd703651124bf704 data/gods_of_olympus/loot_modifiers/hades_blessing_from_wither.json
 f1913cacfe498d67db452bdc35d13b2349698c99 data/gods_of_olympus/loot_modifiers/poseidons_blessing_from_elder_guardian.json
-24116e1b3405e317777edfd384252eb6526748c2 data/neoforge/loot_modifiers/global_loot_modifiers.json
+9eca4756d66bed3458488bf5f69b0dbddb575b58 data/neoforge/loot_modifiers/global_loot_modifiers.json

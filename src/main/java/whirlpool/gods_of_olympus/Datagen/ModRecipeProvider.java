@@ -67,5 +67,14 @@ public class ModRecipeProvider extends RecipeProvider {
                 ModItems.HERMES_WINGED_SANDALS.get()
         ).unlocks("has_blessing_of_hermes", has(ModItems.BLESSING_OF_HERMES)).save(output, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(Gods_of_olympus.MODID,
                 "hermes_winged_sandals_smithing")));
+
+        SmithingTransformRecipeBuilder.smithing(
+                Ingredient.of(ModItems.BLESSING_OF_OLYMPUS), //Template
+                Ingredient.of(Items.BOW), //Base
+                Ingredient.of(ModItems.BLESSING_OF_APOLLO), //Addition
+                RecipeCategory.COMBAT,
+                ModItems.APOLLOS_BOW_OF_LIGHT.get()
+        ).unlocks("has_blessing_of_apollo", has(ModItems.BLESSING_OF_APOLLO)).save(output, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(Gods_of_olympus.MODID,
+                "apollos_bow_of_light_smithing")));
     }
 }

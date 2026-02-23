@@ -28,7 +28,8 @@ public class ModModelProvider extends ModelProvider {
             ModItems.BLESSING_OF_POSEIDON,
             ModItems.BLESSING_OF_HADES,
             ModItems.BLESSING_OF_HERMES,
-            ModItems.BLESSING_OF_OLYMPUS
+            ModItems.BLESSING_OF_OLYMPUS,
+            ModItems.BLESSING_OF_APOLLO
     );
 
     public ModModelProvider(PackOutput output) {

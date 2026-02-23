@@ -31,5 +31,10 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
         tag(ItemTags.TRIDENT_ENCHANTABLE).add(ModItems.POSEIDONS_TRIDENT.asItem());
         tag(ItemTags.DURABILITY_ENCHANTABLE).add(ModItems.POSEIDONS_TRIDENT.asItem());
+
+        tag(ItemTags.BOW_ENCHANTABLE)
+                .add(ModItems.APOLLOS_BOW_OF_LIGHT.asItem())
+                .add(ModItems.ARTEMIS_BOW_OF_THE_HUNT.asItem())
+        ;
     }
 }

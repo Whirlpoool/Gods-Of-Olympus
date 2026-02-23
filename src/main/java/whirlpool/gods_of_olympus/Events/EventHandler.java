@@ -11,10 +11,12 @@ import net.minecraft.world.item.trading.MerchantOffer;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingChangeTargetEvent;
+import net.neoforged.neoforge.event.entity.living.LivingEntityUseItemEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
 import net.neoforged.neoforge.event.village.WandererTradesEvent;
 import whirlpool.gods_of_olympus.Gods_of_olympus;
+import whirlpool.gods_of_olympus.Items.ApollosBowOfLight;
 import whirlpool.gods_of_olympus.Items.HadesHelmOfDarkness;
 import whirlpool.gods_of_olympus.Items.HermesWingedSandals;
 import whirlpool.gods_of_olympus.Registry.ModEffects;
@@ -68,6 +70,16 @@ public class EventHandler {
                     event.setCanceled(true);
                 }
             }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onBowTick(LivingEntityUseItemEvent.Tick event) {
+        ItemStack stack = event.getItem();
+        // Check if it's a bow (or your specific custom bow)
+        if (stack.getItem() instanceof ApollosBowOfLight) {
+            // Subtract an extra tick every frame to double the speed
+            event.setDuration(event.getDuration() - 2);
         }
     }
 }

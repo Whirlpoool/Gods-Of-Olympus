@@ -101,7 +101,8 @@ public class ModItems {
             properties -> new ApollosBowOfLight(
                     properties
                             .rarity(ModRarities.APOLLO)
-                            .durability(1000) //SUBJECT TO CHANGE
+                            .durability(750)
+                            .enchantable(15)
             ));
 
     /**
@@ -113,6 +114,7 @@ public class ModItems {
                     properties
                             .rarity(ModRarities.ARTEMIS)
                             .durability(1000) //SUBJECT TO CHANGE
+                            .enchantable(15)
             ));
 
     /**
@@ -189,6 +191,13 @@ public class ModItems {
             properties -> new Item(
                     properties
                             .rarity(Rarity.EPIC)
+                            .stacksTo(64)
+            ));
+
+    public static final DeferredItem<Item> BLESSING_OF_APOLLO = ITEMS.registerItem("blessing_of_apollo",
+            properties -> new Item(
+                    properties
+                            .rarity(ModRarities.APOLLO)
                             .stacksTo(64)
             ));
 
