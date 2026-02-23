@@ -1,5 +1,6 @@
 package whirlpool.gods_of_olympus.Events;
 
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.npc.villager.VillagerProfession;
 import net.minecraft.world.entity.npc.villager.VillagerTrades;
@@ -47,7 +48,7 @@ public class EventHandler {
     }
 
     @SubscribeEvent
-    public static void addCustomTrades(WandererTradesEvent event) {
+    public static void addCustomWanderingTrades(WandererTradesEvent event) {
         List<VillagerTrades.ItemListing> genericTrades = event.getGenericTrades();
         List<VillagerTrades.ItemListing> rareTrades = event.getRareTrades();
 
@@ -55,6 +56,18 @@ public class EventHandler {
                 new ItemCost(Items.EMERALD, 64),
                 Optional.of(new ItemCost(Items.PHANTOM_MEMBRANE, 1)),
                 new ItemStack(ModItems.BLESSING_OF_HERMES.get(), 1), 1, 10, 0.2f));
+    }
+
+    @SubscribeEvent
+    public static void addCustomTrades(VillagerTradesEvent event) {
+        if (event.getType() == VillagerProfession.CLERIC) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+
+            trades.get(5).add((level,entity, randomSource) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 16),
+                    Optional.of(new ItemCost(Items.DIAMOND_BLOCK, 1)),
+                    new ItemStack(ModItems.BLESSING_OF_OLYMPUS.get(), 1), 10, 10, 0.2f));
+        }
     }
 
     @SubscribeEvent
